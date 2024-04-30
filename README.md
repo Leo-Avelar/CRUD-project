@@ -1,7 +1,8 @@
 # CRUD-project
 
 ## Introdução
-Para a realização deste trabalho foi necessário buscar um banco de dados no site kaggle.com. O arquivo escolhido foi sobre jogos e foi modificado, excluindo algumas colunas e limitando a quantidade inicial de jogos para 2000.
+Para a realização deste trabalho foi necessário buscar um banco de dados no site kaggle.com.
+O arquivo escolhido foi sobre jogos e foi modificado, excluindo algumas colunas e limitando a quantidade inicial de jogos para 2000.
 
 ## Funcionamento:
 Durante a execução do código o arquivo original (.csv) é transformado em um arquivo (.db) que será usado para todas as outras funcionalidades.
