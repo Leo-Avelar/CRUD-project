@@ -16,7 +16,7 @@ public class CheckType {
             input = sc.nextLine().replaceAll("/", "-");
             try {
                 output = StringToDate.parseDate(input);
-                validValue = !validValue;
+                validValue = true;
             } catch (ParseException e) {
                 System.out.println(errorMessage);
             }
@@ -35,9 +35,32 @@ public class CheckType {
             input = sc.nextLine();
             try {
                 output = Integer.parseInt(input);
-                validValue = !validValue;
+                validValue = true;
             } catch (NumberFormatException e) {
                 System.out.println(errorMessage);
+            }
+        }
+        return output;
+    }
+
+    public static String getString(String message, String errorMessage) {
+        Scanner sc = new Scanner(System.in);
+        String input = "";
+        String output = null;
+        boolean validValue = false;
+
+        while (!validValue) {
+            System.out.println(message);
+            input = sc.nextLine();
+
+            output = input;
+            input.replace(" ", "");
+
+            if(input == ""){
+                System.out.println(errorMessage);
+            }
+            else{
+                validValue = true;
             }
         }
         return output;
@@ -54,7 +77,7 @@ public class CheckType {
             input = sc.nextLine().replaceAll(",", ".");
             try {
                 output = Float.parseFloat(input);
-                validValue = !validValue;
+                validValue = true;
             } catch (NumberFormatException e) {
                 System.out.println(errorMessage);
             }

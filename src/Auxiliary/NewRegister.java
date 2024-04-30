@@ -9,8 +9,7 @@ public class NewRegister {
         try {
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("\nDigite o nome do jogo: ");
-            String nome = sc.nextLine();
+            String nome = CheckType.getString("\nDigite o nome do jogo: ","\n== Nome Invalido ==" );
 
             Date data = CheckType.getDate("\nDigite a data de lançamento (ano/mês/dia): ", "\n== Data Invalida ==");
 
