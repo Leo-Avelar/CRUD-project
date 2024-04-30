@@ -6,12 +6,10 @@ Para a realização deste trabalho foi necessário buscar um banco de dados no s
 O arquivo escolhido foi sobre jogos e foi modificado, excluindo algumas colunas e limitando a quantidade inicial de jogos para 2000.
 
 
-
 ## Funcionamento:
 Durante a execução do código o arquivo original (.csv) é transformado em um arquivo (.db) que será usado para todas as outras funcionalidades.
 
 No início do arquivo (.db) foi incluído a quantidade de jogos naquele momento (este valor é atualizado toda vez que um novo jogo é adicionado).
-
 
 
 ## Estrutura do arquivo:
@@ -27,12 +25,11 @@ Cada jogo é composto de:
 
 * Data (Date/long) - Contém a data de publicação do jogo (No arquivo este dado fica salvo como long e é apenas transformado em Date para algumas operações).
 
-* Tags (String) - as tags contém os tipos daquele jogo, por exemplo: Multiplayer, Action, Adventure, RPG, Casual, etc.
+* Tags (String) - As tags contém os tipos daquele jogo, por exemplo: Multiplayer, Action, Adventure, RPG, Casual, etc.
 
-* Tempo Médio (int) - contém a quantidade média de horas jogadas.
+* Tempo Médio (int) - Contém a quantidade média de horas jogadas.
 
-* Preço (float) - contém o preço do jogo.
-
+* Preço (float) - Contém o preço do jogo.
 
 
 ## Funcionalidades:
@@ -52,7 +49,6 @@ Cada jogo é composto de:
 * Criptografia (Columnar Transposition Cipher) - A criptografia por colunas usa uma key pré determinada para alterar a ordem do que está sendo criptografado 
 
 * Ordenação (usando Mergesort) - Ao atualizar as informações de algum jogo, se os novos dados forem menores do que os do jogo anterior, ele será sobrescrito na mesma posição do arquivo, deixando lixo(resto das informações do jogo anterior que não serão lidas) para completar, porém, se as informações desse novo jogo forem maiores, para que não ocorra perda de dados, por sobrescrever os jogos posteriores acidentalmente, é necessário marcar o jogo antigo como excluído e adicionar o novo jogo (com o mesmo id do antigo) ao final do arquivo. A ordenação serve portanto para reconstruir o arquivo(.db) colocando os jogos em suas posições corretas, seguindo o número do id.
-
 
 
 ## Como salvar e carregar algum arquivo modificado:
